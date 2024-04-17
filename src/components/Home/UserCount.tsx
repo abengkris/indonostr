@@ -5,11 +5,11 @@ const updateInterval = 30_000;
 
 const getUserCountMessage = (count: number | undefined) => {
   if (count === 0)
-    return <strong>No registered users found. Be the first one!</strong>;
+    return <strong>Belum ada yang mendaftar nih. Jadilah yang pertama!</strong>;
   else if (count && count > 0)
     return (
       <div>
-        <strong>Registered users: {count}</strong> 🎉
+        <strong>IndoNostr People: {count}</strong> 🎉
       </div>
     );
   else return <strong>Loading…</strong>;
