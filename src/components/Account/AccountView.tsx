@@ -130,7 +130,7 @@ export const AccountView = ({ host }: AccountViewProps) => {
     <>
       <form className="box user-form">
         <div className="user-form-header">
-          <strong>Hello {registedUsername}!</strong>
+          <strong>Halo {registedUsername}!</strong>
 
           <p>
             <small>
@@ -139,14 +139,14 @@ export const AccountView = ({ host }: AccountViewProps) => {
               {registeredAt && (
                 <>
                   <br />
-                  <span>Registered since {formatDate(registeredAt)}</span>
+                  <span>Terdaftar sejak {formatDate(registeredAt)}</span>
                 </>
               )}
             </small>
           </p>
         </div>
 
-        <div>Your username</div>
+        <div>Username kamu</div>
 
         <div className="address">
           <input
@@ -161,16 +161,16 @@ export const AccountView = ({ host }: AccountViewProps) => {
           </label>
         </div>
 
-        <div>Your lightning address</div>
+        <div>Lightning address kamu</div>
         <div>
           <small>
             <div>
-              Enter your existing lightning address to enable redirection.
+              Masukkan alamat <i>lightning address</i> kamu yang ada untuk mengaktifkan pengalihan.
             </div>
             <div>
-              You can then use your nostr address as your lightning address.
+            Kemudian kamu bisa menggunakan alamat nostr kamu sebagai <i>lightning address</i>.
             </div>
-            <div>Leave the field empty to disable this feature.</div>
+            <div>Kosongkan kolom untuk menonaktifkan fitur.</div>
           </small>
         </div>
         <div>
@@ -189,7 +189,7 @@ export const AccountView = ({ host }: AccountViewProps) => {
             disabled={!!formError || !hasUsername}
             onClick={handleSave}
           >
-            save
+            simpan
           </button>
         </div>
       </form>
