@@ -196,7 +196,7 @@ export const AccountView = ({ host }: AccountViewProps) => {
       {showFormResult && (
         <div className="box user-update-result">
           {formError && <div className="error">{formError}</div>}
-          {formSubmitted && <strong>Save successful!</strong>}
+          {formSubmitted && <strong>Berhasil menyimpan!</strong>}
         </div>
       )}
 
