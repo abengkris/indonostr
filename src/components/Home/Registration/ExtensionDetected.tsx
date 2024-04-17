@@ -9,14 +9,14 @@ export const ExtensionDetected = ({
 }) => {
   return (
     <div className="box nip07-extension">
-      Compatible browser extension detected.
+      Ekstensi browser terdeteksi.
       <br />
-      Fill in public key?
+      Isi kunci publik?
       <button disabled={disabled} onClick={onAccept}>
-        Yes
+        Iya
       </button>
       <button disabled={disabled} className="secondary" onClick={onReject}>
-        No
+        Tidak
       </button>
     </div>
   );
