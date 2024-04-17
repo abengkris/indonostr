@@ -53,18 +53,18 @@ export const LoginForm = ({ onLogin }: LoginFormProps) => {
   return (
     <>
       <section className="box">
-        <strong>Welcome back, nostrich!</strong>
-        <p>Login with a NIP-07 compatible browser extension.</p>
+        <strong>Selamat datang kembali, IndoNostr People!</strong>
+        <p>Masuk dengan ekstensi browser yang kompatibel dengan NIP-07.</p>
         <button onClick={handleClick}>Login</button>
       </section>
 
       {loginFailed && (
         <section className="box login-error">
           <div className="error">
-            Login failed! No user with your pubkey found.
+          Gagal masuk! Tidak ditemukan pengguna dengan kunci pub Anda.
           </div>
           <div>
-            Do you want to <a href="/">register</a>?
+            Apakah kamu ingin <a href="/">mendaftar</a>?
           </div>
         </section>
       )}
