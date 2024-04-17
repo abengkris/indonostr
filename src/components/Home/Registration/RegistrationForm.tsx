@@ -84,14 +84,14 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
       const isPubkeyValidNpub = pubkeyFormatNpub.test(pubkey);
 
       if (!isPubkeyValidNpub) {
-        return "Invalid npub public key.";
+        return "Kunci publik npub tidak valid.";
       } else {
         const hexKey = convertNpubToHex(pubkey);
 
         if (!hexKey) {
-          return "Invalid npub public key.";
+          return "Kunci publik npub tidak valid.";
         } else if (Object.values(users).includes(hexKey)) {
-          return "Sorry, this pubkey is already taken.";
+          return "Maaf, kunci pub ini sudah digunakan.";
         }
 
         return false;
@@ -102,7 +102,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
       if (!isPubkeyValidHex) {
         return "Invalid public key.";
       } else if (Object.values(users).includes(pubkey)) {
-        return "Sorry, this pubkey is already taken.";
+        return "Maaf, kunci pub ini sudah digunakan.";
       }
 
       return false;
@@ -151,7 +151,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
             const hexKey = hexKeyObj.data as string;
             setPubkeyHex(hexKey);
           } catch (error) {
-            setFormError("Invalid npub public key.");
+            setFormError("Kunci publik npub tidak valid.");
           }
         } else {
           setPubkeyHex(inputValue);
@@ -228,7 +228,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
         <div>
           <Toggle
             id="lightning-address-redirect"
-            label="use as lightning address"
+            label="Gunakan sebagai alamat lightning"
             isOn={lightningAddressEnabled}
             onChange={(event) =>
               setLightningAddressEnabled(event.target.checked)
@@ -241,10 +241,10 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
             <div>
               <small>
                 <div>
-                  Enter your existing lightning address to enable redirection.
+                Masukkan alamat <i>lightning</i> kamu yang ada untuk mengaktifkan pengalihan.
                 </div>
                 <div>
-                  You can then use your nostr address as your lightning address.
+                Kamu bisa menggunakan alamat nostr kamu sebagai alamat <i>lightning</i>.
                 </div>
               </small>
             </div>
@@ -252,7 +252,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
               <input
                 type="text"
                 placeholder={
-                  !users ? "loading…" : "janedoe69@walletofsatoshi.com"
+                  !users ? "loading…" : "abeng@zbd.gg"
                 }
                 maxLength={64}
                 disabled={formDisabled || formSubmitted}
@@ -275,7 +275,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
             }
             onClick={handleRegistration}
           >
-            register
+            daftar
           </button>
         </div>
       </form>
