@@ -14,10 +14,10 @@ export const RegistrationSuccess = ({
   return (
     <div className="registration-success">
       <p>
-        <strong>Your registration was successful!</strong>
+        <strong>Yeay! kamu berhasil mendaftar!</strong>
       </p>
       <div>
-        This is your nostr address:
+        Ini adalah alamat nostr kamu sekarang:
         <CopyWrapper text={address} className="nip-05">
           <div className="box copy-box">
             <strong>{address}</strong>
@@ -28,8 +28,8 @@ export const RegistrationSuccess = ({
         </CopyWrapper>
       </div>
       <p>
-        Copy that address into the <span className="text-gradient">NIP-05</span>{" "}
-        field of your nostr profile and save.
+        Salin alamat nostr baru kamu ke kolom <span className="text-gradient">NIP-05</span>{" "}
+        di profil nostr kamu dan simpan.
       </p>
     </div>
   );
