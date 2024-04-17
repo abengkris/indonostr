@@ -49,9 +49,9 @@ export const DangerZone = ({ username }: { username: string }) => {
   return (
     <>
       <section className="box danger-zone">
-        <div className="danger">DANGER ZONE</div>
-        <p>Delete my account and all associated data.</p>
-        <button onClick={() => setShowDeleteModal(true)}>DELETE</button>
+        <div className="danger">ZONA BERBAHAYA</div>
+        <p>Hapus akun saya dan semua data terkait.</p>
+        <button onClick={() => setShowDeleteModal(true)}>HAPUS</button>
       </section>
       {showDeleteModal &&
         createPortal(
@@ -69,14 +69,13 @@ export const DangerZone = ({ username }: { username: string }) => {
               </button>
 
               <div className="danger">
-                Warning! You are about to delete your account.
+                Peringatan! Kamu akan menghapus akun kamu.
               </div>
               <p>
-                When you proceed, all of your data will be deleted and you wil
-                be redirected to the home page.
+              Saat kamu melanjutkan, semua data kamu akan dihapus dan kamu akan dialihkan ke halaman beranda.
               </p>
               <p>
-                Type "<strong>{deletionConfirmText}</strong>" to proceed.
+                Ketik "<strong>{deletionConfirmText}</strong>" untuk memproses.
               </p>
               <input
                 type="text"
@@ -89,7 +88,7 @@ export const DangerZone = ({ username }: { username: string }) => {
                 disabled={deleteButtonDisabled}
                 onClick={handleDelete}
               >
-                I understand, delete my account
+                Saya paham, hapus akun saya
               </button>
             </div>
           </div>,
