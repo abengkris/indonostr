@@ -1,15 +1,15 @@
 export const ExtensionNotFound = () => (
   <section className="box">
-    <div className="error">No NIP-07 compatible browser extension found.</div>
+    <div className="error">Tidak ditemukan ekstensi browser yang kompatibel dengan NIP-07.</div>
     <div>
-      Please{" "}
+      Silahkan{" "}
       <a
         href="https://github.com/aljazceru/awesome-nostr#browser-extensions"
         target="_blank"
       >
-        install your favourite one
+        instal ekstensi favoritmu
       </a>{" "}
-      and refresh this page.
+      dan segarkan halaman ini.
     </div>
   </section>
 );
