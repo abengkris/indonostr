@@ -46,7 +46,7 @@ export const CopyWrapper = ({
         unmountOnExit
       >
         <div className="success box" ref={nodeRef}>
-          <span className="text-gradient">Copied!</span>
+          <span className="text-gradient">Tersalin!</span>
         </div>
       </CSSTransition>
       {children}
