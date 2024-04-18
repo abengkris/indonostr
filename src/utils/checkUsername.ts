@@ -11,9 +11,9 @@ export const checkUsername = (username: string, users?: UserDict) => {
   const isUsernameValid = usernameFormat.test(username);
 
   if (!isUsernameValid) {
-    return "The username can only contain lowercase letters, numbers, _, - and .";
+    return "Nama pengguna cuman bisa mengandung huruf kecil dan angka.";
   } else if (users[username]) {
-    return "Sorry, this username is already taken.";
+    return "Maaf banget nih, nama pengguna itu udah ada yang punya. Ganti yang lain ya...";
   } else {
     return false;
   }

@@ -1,9 +1,9 @@
 const defaultContent =
-  "Please sign this event to verify ownership of your public key";
+  "Harap sign event ini untuk memverifikasi kepemilikan pubkey kamu";
 
 export const signEvent = async (content = defaultContent) => {
   if (!window.nostr) {
-    console.error("Cannot sign event: No NIP-07 compatible extension found");
+    console.error("Nggak bisa sign event: Nggak nemuin ekstensi yang kompatibel dengan NIP-07");
     return false;
   }
 

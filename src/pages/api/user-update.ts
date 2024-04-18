@@ -55,7 +55,7 @@ export const post: APIRoute = async function post({ request }) {
         return new Response(
           JSON.stringify({
             success: false,
-            message: "User not found",
+            message: "Nggak nemu pengguna",
           }),
           {
             status: 200,
