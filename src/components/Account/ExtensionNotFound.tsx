@@ -4,7 +4,7 @@ export const ExtensionNotFound = () => (
     <div>
       Silahkan{" "}
       <a
-        href="https://github.com/aljazceru/awesome-nostr#browser-extensions"
+        href="https://github.com/aljazceru/awesome-nostr?tab=readme-ov-file#nip-07-browser-extensions"
         target="_blank"
       >
         instal ekstensi favoritmu
