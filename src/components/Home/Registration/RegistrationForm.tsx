@@ -71,7 +71,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
   const showFormResult = !!formError || !!formSubmitted;
 
   const checkPubkey = (pubkey: string) => {
-    if (!users) return "Users not loaded";
+    if (!users) return "Nggak bisa nemuin pengguna";
 
     if (pubkey.length === 0) {
       return false;
@@ -84,14 +84,14 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
       const isPubkeyValidNpub = pubkeyFormatNpub.test(pubkey);
 
       if (!isPubkeyValidNpub) {
-        return "Kunci publik npub tidak valid.";
+        return "Kunci publik npub nggak valid nih.";
       } else {
         const hexKey = convertNpubToHex(pubkey);
 
         if (!hexKey) {
-          return "Kunci publik npub tidak valid.";
+          return "Kunci publik npub nggak valid nih.";
         } else if (Object.values(users).includes(hexKey)) {
-          return "Maaf, kunci pub ini sudah digunakan.";
+          return "Maaf banget, kunci pub ini udah ada yang pakai.";
         }
 
         return false;
@@ -100,9 +100,9 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
       const isPubkeyValidHex = pubkeyFormatHex.test(pubkey);
 
       if (!isPubkeyValidHex) {
-        return "Invalid public key.";
+        return "Kunci publik npub nggak valid nih.";
       } else if (Object.values(users).includes(pubkey)) {
-        return "Maaf, kunci pub ini sudah digunakan.";
+        return "Maaf banget, kunci pub ini udah ada yang pakai.";
       }
 
       return false;
@@ -151,7 +151,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
             const hexKey = hexKeyObj.data as string;
             setPubkeyHex(hexKey);
           } catch (error) {
-            setFormError("Kunci publik npub tidak valid.");
+            setFormError("Kunci publik npub nggak valid nih.");
           }
         } else {
           setPubkeyHex(inputValue);
@@ -203,7 +203,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
         <div>
           <input
             type="text"
-            placeholder={!users ? "loading…" : "public key"}
+            placeholder={!users ? "tunggu bentar ya…" : "public key"}
             maxLength={64}
             disabled={formDisabled || formSubmitted}
             value={pubkey}
@@ -214,7 +214,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
         <div className="address">
           <input
             type="text"
-            placeholder={!users ? "loading…" : "username"}
+            placeholder={!users ? "tunggu bentar ya…" : "username"}
             maxLength={64}
             disabled={formDisabled || formSubmitted}
             value={username}
@@ -228,7 +228,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
         <div>
           <Toggle
             id="lightning-address-redirect"
-            label="Gunakan sebagai alamat lightning"
+            label="Mau jadiin alamat lightning juga?"
             isOn={lightningAddressEnabled}
             onChange={(event) =>
               setLightningAddressEnabled(event.target.checked)
@@ -241,10 +241,10 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
             <div>
               <small>
                 <div>
-                Masukkan alamat <i>lightning</i> kamu yang ada untuk mengaktifkan pengalihan.
+                Masukkin alamat <i>lightning</i> kamu yang ada untuk mengaktifkan pengalihan.
                 </div>
                 <div>
-                Kamu bisa menggunakan alamat nostr kamu sebagai alamat <i>lightning</i>.
+                Nanti bisa pakai alamat nama-kamu@indonostr.xyz kamu sebagai alamat <i>lightning</i>.
                 </div>
               </small>
             </div>
@@ -252,7 +252,7 @@ export const RegistrationForm = ({ disabled, host }: RegistrationFormProps) => {
               <input
                 type="text"
                 placeholder={
-                  !users ? "loading…" : "abeng@zbd.gg"
+                  !users ? "tunggu bentar ya…" : "abeng@zbd.gg"
                 }
                 maxLength={64}
                 disabled={formDisabled || formSubmitted}
