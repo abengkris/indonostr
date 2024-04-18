@@ -69,13 +69,13 @@ export const DangerZone = ({ username }: { username: string }) => {
               </button>
 
               <div className="danger">
-                Peringatan! Kamu akan menghapus akun kamu.
+                Peringatan! Yakin kamu mau hapus akun?
               </div>
               <p>
               Saat kamu melanjutkan, semua data kamu akan dihapus dan kamu akan dialihkan ke halaman beranda.
               </p>
               <p>
-                Ketik "<strong>{deletionConfirmText}</strong>" untuk memproses.
+                Ketik "<strong>{deletionConfirmText}</strong>" untuk memproses penghapusan.
               </p>
               <input
                 type="text"

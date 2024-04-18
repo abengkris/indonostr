@@ -12,7 +12,7 @@ const getUserCountMessage = (count: number | undefined) => {
         <strong>IndoNostr People: {count}</strong> 🎉
       </div>
     );
-  else return <strong>Loading…</strong>;
+  else return <strong>Tunggu bentar ya…</strong>;
 };
 
 export const UserCount = () => {

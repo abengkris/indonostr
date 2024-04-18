@@ -31,6 +31,7 @@ export const RegistrationSuccess = ({
         Salin alamat nostr baru kamu ke kolom <span className="text-gradient">NIP-05</span>{" "}
         di profil nostr kamu dan simpan.
       </p>
+      <p>Selamat bergabung di 'Indonesian Nostr People'!</p>
     </div>
   );
 };

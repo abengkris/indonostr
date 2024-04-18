@@ -165,10 +165,10 @@ export const AccountView = ({ host }: AccountViewProps) => {
         <div>
           <small>
             <div>
-              Masukkan alamat <i>lightning address</i> kamu yang ada untuk mengaktifkan pengalihan.
+              Masukin alamat <i>lightning address</i> kamu yang ada untuk mengaktifkan pengalihan.
             </div>
             <div>
-            Kemudian kamu bisa menggunakan alamat nostr kamu sebagai <i>lightning address</i>.
+            Kemudian kamu bisa pakai alamat nama-kamu@indonostr.xyz sebagai <i>lightning address</i>.
             </div>
             <div>Kosongkan kolom untuk menonaktifkan fitur.</div>
           </small>

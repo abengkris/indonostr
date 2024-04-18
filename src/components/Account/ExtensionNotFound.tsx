@@ -1,6 +1,6 @@
 export const ExtensionNotFound = () => (
   <section className="box">
-    <div className="error">Tidak ditemukan ekstensi browser yang kompatibel dengan NIP-07.</div>
+    <div className="error">Nggak nemu ekstensi browser yang kompatibel dengan NIP-07 nih.</div>
     <div>
       Silahkan{" "}
       <a
@@ -9,7 +9,7 @@ export const ExtensionNotFound = () => (
       >
         instal ekstensi favoritmu
       </a>{" "}
-      dan segarkan halaman ini.
+      dulu terus segarkan harimu, eh. <i>refresh</i> halaman ini ya...
     </div>
   </section>
 );
