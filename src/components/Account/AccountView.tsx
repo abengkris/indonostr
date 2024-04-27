@@ -31,7 +31,7 @@ const updateUser = async (signedEvent: NostrEvent) => {
 
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
-  return format(date, "do 'of' MMMM',' yyyy");
+  return format(date, "dd MMMM yyyy");
 };
 
 export const AccountView = ({ host }: AccountViewProps) => {
