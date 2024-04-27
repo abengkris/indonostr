@@ -1,6 +1,6 @@
 export default {
   // your domain name
-  host: "indonostr.xyz",
+  host: "IndoNostr.xyz",
 
   // set to true to disable registration site-wide
   registrationDisabled: false,
