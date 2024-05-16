@@ -2,6 +2,7 @@
 import Donation from './Donation.astro';
 import Registration from './Registration/Registration.astro';
 import { UserCount } from './UserCount.tsx';
+import { WhatNostr } from '. /whatIsNostr.astro';
 
 import config from '../../../site.config'
 
@@ -14,5 +15,5 @@ const {
 
 <Registration disabled={registrationDisabled} host={host} />
 <UserCount client:load />
-
+<WhatNostr />
 <Donation lnUrl={donationLNUrl} />
